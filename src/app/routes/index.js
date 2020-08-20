@@ -1,11 +1,13 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Redirect, Route, Switch } from 'react-router-dom';
+
+import { LOCAL_STORAGE_KEY } from 'app/consts';
+import { makeSelectAccounts } from 'app/redux/incognito/selector';
+import LocalStorageServices from 'app/utils/localStorage';
 import { ConnectedRouter } from 'connected-react-router';
 import isEmpty from 'lodash/isEmpty';
-import { LOCAL_STORAGE_KEY } from 'app/consts';
-import LocalStorageServices from 'app/utils/localStorage';
-import { makeSelectAccounts } from 'app/redux/incognito/selector';
+import { useSelector } from 'react-redux';
+import { Redirect, Route, Switch } from 'react-router-dom';
+
 // import { loadingClose, loadingOpen } from 'app/redux/common/actions';
 // import { onIncognitoGetAccounts } from 'app/redux/incognito/actions';
 // import loadIncognito from 'app/services/incognito';
