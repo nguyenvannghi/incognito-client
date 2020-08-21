@@ -31,7 +31,7 @@ const Onboarding = () => {
                 <Row gutter={[30, 30]}>
                     <Col className="text-center" span={24}>
                         <Avatar size={150} icon={<img src={Logo} alt="WELCOME TO INCOGNITO WEB WALLET" />} />
-                        <Title level={3}>We are moving to new home - LightShadowBox.Com</Title>
+                        <Title level={3}>We are moving to new home - lightshadowbox.app</Title>
                         <Button type="primary" className="btn" size="large" onClick={onAccessWallet}>
                             Migrate to Light Shadow Box
                         </Button>
