@@ -6,6 +6,7 @@ const RouterApp = {
     rOnboarding,
     rInitWallet,
     rAccount,
+    rMigrate: '/migrate',
 };
 
 export default RouterApp;
