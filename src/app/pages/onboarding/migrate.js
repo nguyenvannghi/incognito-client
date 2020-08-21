@@ -13,15 +13,14 @@ const OnboardingStyled = styled.div`
 `;
 
 const Migration = () => {
-    const genLink = (lsb, backupStr) => {
-        const b64 = window.btoa(backupStr);
-        return `${lsb}/migrate-from-incwallet?token=${b64}`;
+    const genLink = (lsb) => {
+        return `${lsb}/migrate-from-incwallet?url=${window.location.origin}`;
     };
 
     const lightshadowbox = window.location.search.substr(10);
     const backupWalletStr = LocalStorageServices.getItem(LOCAL_STORAGE_KEY.WALLET);
     if (backupWalletStr) {
-        window.location.replace(genLink(lightshadowbox, backupWalletStr));
+        window.location.replace(genLink(lightshadowbox));
     } else {
         window.location.replace(`${lightshadowbox}/initialize`);
     }

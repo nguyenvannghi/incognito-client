@@ -5,7 +5,6 @@ import { META_TITLE_PAGE } from 'app/consts';
 import history from 'app/routes/history';
 import Logo from 'assets/logo.png';
 import { Helmet } from 'react-helmet';
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 const OnboardingStyled = styled.div`
@@ -15,9 +14,7 @@ const OnboardingStyled = styled.div`
 `;
 
 const Onboarding = () => {
-    const dispatch = useDispatch();
     const { Title } = Typography;
-
     const onAccessWallet = async () => {
         history.push('/migrate?callback=https://lightshadowbox.app');
     };
